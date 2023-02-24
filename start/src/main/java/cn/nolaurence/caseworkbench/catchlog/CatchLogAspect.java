@@ -2,6 +2,7 @@ package cn.nolaurence.caseworkbench.catchlog;
 
 import cn.nolaurence.caseworkbench.exception.BizException;
 import cn.nolaurence.caseworkbench.exception.SysException;
+import com.alibaba.fastjson2.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -72,7 +73,7 @@ public class CatchLogAspect {
             log.debug("START PROCESSING: {}", joinPoint.getSignature().toShortString());
             Object[] args = joinPoint.getArgs();
             for (Object arg : args) {
-                log.debug("REQUEST: {}", JSON.toJSONString(arg, SerializerFeature.IgnoreErrorGetter));
+                log.debug("REQUEST: {}", JSON.toJSONString(arg));
             }
         } catch (Exception e) {
             //swallow it
