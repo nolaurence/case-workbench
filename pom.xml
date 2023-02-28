@@ -29,6 +29,14 @@
 
     <dependencyManagement>
         <dependencies>
+            <!--import dev-tools-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-devtools</artifactId>
+                <version>2.7.6</version>
+                <scope>runtime</scope>
+                <optional>true</optional>
+            </dependency>
             <dependency>
                 <groupId>com.taobao.arthas</groupId>
                 <artifactId>arthas-spring-boot-starter</artifactId>
@@ -40,6 +48,12 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>2.2.2</version>
                 <type>jar</type>
+            </dependency>
+            <!--mybatis plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.5.1</version>
             </dependency>
             <dependency>
                 <groupId>mysql</groupId>
@@ -56,6 +70,18 @@
                 <groupId>com.alibaba.fastjson2</groupId>
                 <artifactId>fastjson2</artifactId>
                 <version>2.0.23</version>
+            </dependency>
+
+            <!--import apache commons3-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.12.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>4.4</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
