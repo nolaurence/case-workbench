@@ -120,9 +120,9 @@
         </profile>
         <!-- 生产 -->
         <profile>
-            <id>pro</id>
+            <id>prod</id>
             <properties>
-                <profiles.active>pro</profiles.active>
+                <profiles.active>prod</profiles.active>
             </properties>
         </profile>
     </profiles>
